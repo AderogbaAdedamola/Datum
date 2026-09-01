@@ -1,0 +1,2 @@
+# Datum
+Datum is a data marketplace where researchers get real, verified respondent data on time. Respondents build a trust level by verifying their profile so surveys auto-fill locked, unfalsifiable answers. Requesters target by age, location, and trust level; respondents earn points, badges, and leaderboard rank.
