@@ -17,6 +17,20 @@ const userSchema = new mongoose.Schema({
         required: true
     },
 
+    avatar: String,
+
+    googleId: {
+        type: String,
+        unique: true,
+        sparse: true
+    },
+
+    provider: {
+        type: String,
+        enum: ['local', 'google'],
+        default: 'local'
+    },
+
     occupation: {
         type: String,
         enum: ["researcher", "student"],

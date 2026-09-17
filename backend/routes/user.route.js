@@ -1,7 +1,10 @@
 import express from "express";
+import { loginUser, registerUser, googleLogin, googleCallback } from "../controllers/user.controller.js";
 
-const router = express.Router();
+const useRouter = express.Router();
 
-router.post("/login", loginUser)
+useRouter.post("/login", loginUser);
+useRouter.get("/google", googleLogin);
+useRouter.get("/google/callback", googleCallback);
 
-export default router
+export default useRouter;
