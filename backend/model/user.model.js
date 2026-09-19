@@ -17,6 +17,12 @@ const userSchema = new mongoose.Schema({
         required: true
     },
 
+    password: {
+        type: String,
+        required: true,
+        select: false
+    },
+
     avatar: String,
 
     googleId: {
@@ -31,12 +37,37 @@ const userSchema = new mongoose.Schema({
         default: 'local'
     },
 
-    occupation: {
+    role: {
         type: String,
-        enum: ["researcher", "student"],
+        enum: ["researcher", "student", "admin"],
         required: true,
         default: true
     },
+
+    dateOfBirth: Date,
+    gender: {
+        type: String,
+        enum: ["male", "female", "other", "preferNotToSay"]
+    },
+
+    location: {
+        country: String,
+        state: String,
+        city: String
+    },
+
+    education: {
+        institution: String,
+        faculty: String,
+        department: String,
+        level: String,
+        graduationYear: Number
+    },
+
+    isActive: {
+        type: Boolean,
+        default: true
+    }
 },
 {
     timestamps: true,

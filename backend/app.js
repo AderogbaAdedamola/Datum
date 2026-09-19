@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import useRouter from "./routes/user.route.js";
+import surveyRouter from "./routes/survey.route.js";
 
 
 const app = express();
@@ -12,6 +13,7 @@ app.use(express.json());
 
 //custom routes
 app.use("/api/user", useRouter);
+app.use("/api/survey", surveyRouter);
 
 //Health check route
 app.get("/", (req, res) => {
