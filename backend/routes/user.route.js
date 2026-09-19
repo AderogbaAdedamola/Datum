@@ -4,6 +4,7 @@ import { loginUser, registerUser, googleLogin, googleCallback } from "../control
 const useRouter = express.Router();
 
 useRouter.post("/login", loginUser);
+useRouter.post("/register", registerUser);
 useRouter.get("/google", googleLogin);
 useRouter.get("/google/callback", googleCallback);
 
