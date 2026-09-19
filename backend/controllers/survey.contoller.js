@@ -151,9 +151,9 @@ const deleteSurvey = async (req, res) => {
         if (!survey){
             return res.status(404).json({
                 success: false,
-                message: "Survey not found"
-            }),
-        }
+                message: "Survey not found",
+            })
+        };
 
 
         await Survey.findByIdAndDelete(surveyId);
