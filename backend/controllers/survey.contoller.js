@@ -1,5 +1,5 @@
-import Survey from "../models/survey.model.js";
-import Project from "../models/project.model.js"
+import Survey from "../model/survey.model.js";
+import Project from "../model/project.model.js"
 
 const createSurvey = async (req, res) => {
     try {
