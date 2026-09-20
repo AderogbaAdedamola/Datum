@@ -12,12 +12,15 @@ const createSurvey = async (req, res) => {
             });
         }
 
-        const project = await Project.findById(projectId);
+        const project = await Project.findOne({
+            _id: projectId,
+            researcherId: req.user._id
+        });
 
         if (!project){
             return res.status(404).json({
                 success: false,
-                message: "Project not found"
+                message: "Project not found or you do not own this project"
             });
         }
 
